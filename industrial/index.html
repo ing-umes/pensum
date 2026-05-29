@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pensum de Ingeniería Industrial - UMES">
-  <meta name="keywords" content="ingeniería industrial, industria, UMES, pensum, currículo">
+  <meta name="description" content="Pensum de Ingeniería en Sistemas, Informática y Ciencias de la Computación - UMES">
+  <meta name="keywords" content="ingeniería industrial, UMES, pensum, currículo">
   <meta name="author" content="UMES - Universidad Mesoamericana">
   
   <title>Pensum | Ingeniería Industrial - UMES</title>
@@ -76,6 +76,26 @@
     .course-button:hover {
       background-color: rgba(0, 0, 0, 0.03);
     }
+
+    @media (max-width: 768px) {
+      .credits-badge {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        background-color: #f3f4f6;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .credits-badge {
+        display: inline;
+        margin-left: 1rem;
+      }
+    }
   </style>
 </head>
 <body class="h-full bg-white">
@@ -83,7 +103,7 @@
   <div class="max-w-5xl mx-auto p-6 md:p-12">
 
     <!-- Encabezado Responsive -->
-    <div class="flex flex-col items-center mb-12">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
       <!-- Logos en móvil -->
       <div class="flex gap-8 md:hidden mb-6">
         <img 
@@ -100,35 +120,44 @@
         >
       </div>
 
-      <!-- Logos en desktop -->
-      <div class="hidden md:flex w-full items-center justify-between mb-8">
+      <!-- Logo izquierdo en desktop -->
+      <div class="hidden md:flex flex-shrink-0">
         <img 
           src="https://i.ibb.co/k61r3ykV/Variaciones-de-Logotipo-Mesa-de-trabajo-1.png" 
           alt="Logo UMES" 
           class="logo-img w-40 h-40"
           loading="lazy"
         >
-        <img 
-          src="https://i.ibb.co/tMNtptmk/Logo-Facultad-Ingenier-a-01.png" 
-          alt="Logo Facultad de Ingeniería" 
-          class="logo-img w-40 h-40"
-          loading="lazy"
-        >
       </div>
 
       <!-- Título -->
-      <div class="text-center">
+      <div class="text-center flex-grow">
         <h1 class="text-4xl md:text-5xl font-bold text-[var(--primary-color)] leading-tight">
           Ingeniería Industrial
         </h1>
         <p class="text-[var(--primary-color)] mt-3 text-lg">Universidad Mesoamericana • Facultad de Ingeniería</p>
       </div>
+
+      <!-- Logo derecho en desktop -->
+      <div class="hidden md:flex flex-shrink-0">
+        <img 
+          src="https://i.ibb.co/tMNtptmk/Logo-Facultad-Ingenier-a-01.png" 
+          alt="Logo Facultad de Ingeniería" 
+          class="logo-img w-36 h-36"
+          loading="lazy"
+        >
+      </div>
     </div>
 
     <!-- Perfil de Ingreso -->
-    <section class="max-w-4xl mx-auto mb-12 p-8 rounded-3xl bg-white shadow-sm border border-[var(--accent-color)]" aria-label="Perfil de Ingreso">
-      <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-4">Perfil de Ingreso</h2>
-      <p class="text-gray-700 leading-relaxed">
+    <section class="max-w-4xl mx-auto mb-12 p-8 rounded-3xl bg-gradient-to-br from-blue-50 to-white border-l-4" style="border-color: #1E40AF;" aria-label="Perfil de Ingreso">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #1E40AF;">
+          <i data-lucide="user" class="w-6 h-6 text-white"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-[var(--primary-color)]">Perfil de Ingreso</h2>
+      </div>
+      <p class="text-gray-700 leading-relaxed ml-16">
         Dirigido a estudiantes con fuerte vocación tecnológica, pensamiento lógico-matemático y pasión por la innovación. 
         Se recomienda tener bases sólidas en matemáticas, capacidad analítica y habilidades básicas de computación.
       </p>
@@ -187,32 +216,42 @@
     <section id="semesters" class="max-w-4xl mx-auto space-y-8" aria-label="Pensum por Semestres"></section>
 
     <!-- Perfil de Egreso -->
-    <section class="max-w-4xl mx-auto mt-20 p-8 rounded-3xl bg-white shadow-sm border border-[var(--accent-color)]" aria-label="Perfil de Egreso">
-      <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-4">Perfil de Egreso</h2>
-      <p class="text-gray-700 leading-relaxed">
+    <section class="max-w-4xl mx-auto mt-20 p-8 rounded-3xl bg-gradient-to-br from-green-50 to-white border-l-4" style="border-color: #15803D;" aria-label="Perfil de Egreso">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #15803D;">
+          <i data-lucide="check-circle" class="w-6 h-6 text-white"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-[var(--primary-color)]">Perfil de Egreso</h2>
+      </div>
+      <p class="text-gray-700 leading-relaxed ml-16">
         Profesionales capaces de diseñar, desarrollar e implementar soluciones tecnológicas innovadoras, 
         con sólida formación técnica, ética y visión estratégica.
       </p>
     </section>
 
     <!-- Requisitos de Graduación -->
-    <section class="max-w-4xl mx-auto mt-8 p-8 rounded-3xl bg-white shadow-sm border border-[var(--accent-color)]" aria-label="Requisitos de Graduación">
-      <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-4">Requisitos de Graduación</h2>
-      <ul class="space-y-3 text-gray-700">
+    <section class="max-w-4xl mx-auto mt-8 p-8 rounded-3xl bg-gradient-to-br from-yellow-50 to-white border-l-4" style="border-color: #854D0E;" aria-label="Requisitos de Graduación">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #854D0E;">
+          <i data-lucide="clipboard-check" class="w-6 h-6 text-white"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-[var(--primary-color)]">Requisitos de Graduación</h2>
+      </div>
+      <ul class="space-y-3 text-gray-700 ml-16">
         <li class="flex gap-3">
-          <span class="text-[var(--primary-color)] font-bold flex-shrink-0">•</span>
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
           <span>Aprobar todas las materias con mínimo 61 puntos.</span>
         </li>
         <li class="flex gap-3">
-          <span class="text-[var(--primary-color)] font-bold flex-shrink-0">•</span>
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
           <span>Promedio general acumulado mínimo de 70 puntos.</span>
         </li>
         <li class="flex gap-3">
-          <span class="text-[var(--primary-color)] font-bold flex-shrink-0">•</span>
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
           <span>Desarrollar y sustentar el Proyecto Profesional (mínimo 70 puntos).</span>
         </li>
         <li class="flex gap-3">
-          <span class="text-[var(--primary-color)] font-bold flex-shrink-0">•</span>
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
           <span>Aprobar el Examen General Privado con mínimo 70 puntos.</span>
         </li>
       </ul>
@@ -229,7 +268,7 @@
         courses: [
           {
             name: "Estructuras Lógicas",
-            desc: "Este curso introduce los fundamentos de la lógica proposicional y de predicados, tablas de verdad, álgebra de Boole y circuitos lógicos. Los estudiantes desarrollan habilidades para analizar y diseñar sistemas lógicos que son la base de todos los componentes digitales en computación.\n\nSe enfatiza el razonamiento deductivo y su aplicación en la resolución de problemas computacionales, preparando al estudiante para cursos avanzados de programación y arquitectura de computadoras.",
+            desc: "Este curso introduce los fundamentos de la lógica proposicional y de predicados, tablas de verdad, álgebra de Boole y circuitos lógicos. Los estudiantes desarrollan habilida[...]",
             credits: 4,
             area: "Matemáticas",
             color: "#0A4735",
@@ -237,7 +276,7 @@
           },
           {
             name: "Matemática I",
-            desc: "Estudio de funciones, límites, derivadas e integrales de funciones de una variable. Incluye aplicaciones en optimización y modelado de sistemas reales.\n\nEste curso proporciona las herramientas matemáticas esenciales para el análisis cuantitativo en ingeniería de sistemas y ciencias de la computación.",
+            desc: "Estudio de funciones, límites, derivadas e integrales de funciones de una variable. Incluye aplicaciones en optimización y modelado de sistemas reales.\n\nEste curso proporci[...]",
             credits: 6,
             area: "Matemáticas",
             color: "#0A4735",
@@ -245,7 +284,7 @@
           },
           {
             name: "Técnicas de Estudio I",
-            desc: "Desarrolla habilidades de aprendizaje autónomo, técnicas de lectura comprensiva, toma de apuntes y métodos de estudio efectivos. Incluye estrategias para la gestión del tiempo y preparación de exámenes.\n\nLos estudiantes aprenden a organizar información y desarrollar hábitos académicos que les permitirán tener éxito en su carrera universitaria.",
+            desc: "Desarrolla habilidades de aprendizaje autónomo, técnicas de lectura comprensiva, toma de apuntes y métodos de estudio efectivos. Incluye estrategias para la gestión del tie[...]",
             credits: 4,
             area: "Complementarios",
             color: "#854D0E",
@@ -253,7 +292,7 @@
           },
           {
             name: "Programación I",
-            desc: "Introducción a los conceptos fundamentales de programación: algoritmos, pseudocódigo, variables, estructuras de control y funciones. Se utiliza un lenguaje de programación estructurado.\n\nLos estudiantes resuelven problemas básicos mediante el diseño e implementación de programas simples, sentando las bases para el desarrollo de software.",
+            desc: "Introducción a los conceptos fundamentales de programación: algoritmos, pseudocódigo, variables, estructuras de control y funciones. Se utiliza un lenguaje de programación [...]",
             credits: 6,
             area: "Programación",
             color: "#15803D",
@@ -261,7 +300,7 @@
           },
           {
             name: "Electricidad I",
-            desc: "Conceptos básicos de electricidad: circuitos, corriente, voltaje, resistencia, leyes de Kirchhoff y potencia eléctrica. Incluye análisis de circuitos DC.\n\nEste curso proporciona los fundamentos físicos necesarios para entender el hardware de los sistemas computacionales.",
+            desc: "Conceptos básicos de electricidad: circuitos, corriente, voltaje, resistencia, leyes de Kirchhoff y potencia eléctrica. Incluye análisis de circuitos DC.\n\nEste curso propo[...]",
             credits: 5,
             area: "Ciencias Naturales",
             color: "#1E40AF",
@@ -275,7 +314,7 @@
         courses: [
           {
             name: "Estructuras Lógicas II",
-            desc: "Continuación del estudio de lógica digital con énfasis en circuitos combinacionales y secuenciales, flip-flops, contadores y registros. Se introduce el diseño de sistemas digitales complejos.\n\nLos estudiantes aplican conceptos de minimización lógica y diseño de máquinas de estado finito.",
+            desc: "Continuación del estudio de lógica digital con énfasis en circuitos combinacionales y secuenciales, flip-flops, contadores y registros. Se introduce el diseño de sistemas d[...]",
             credits: 4,
             area: "Matemáticas",
             color: "#0A4735",
@@ -283,7 +322,7 @@
           },
           {
             name: "Física I",
-            desc: "Estudio de la mecánica clásica: cinemática, dinámica, leyes de Newton, trabajo, energía y conservación del momento. Incluye aplicaciones en sistemas físicos.\n\nProporciona los principios científicos fundamentales para entender el comportamiento de los sistemas computacionales.",
+            desc: "Estudio de la mecánica clásica: cinemática, dinámica, leyes de Newton, trabajo, energía y conservación del momento. Incluye aplicaciones en sistemas físicos.\n\nProporci[...]",
             credits: 5,
             area: "Ciencias Naturales",
             color: "#1E40AF",
@@ -291,7 +330,7 @@
           },
           {
             name: "Programación II",
-            desc: "Profundización en programación estructurada con énfasis en modularidad, recursividad, manejo de archivos y estructuras de datos básicas.\n\nLos estudiantes desarrollan programas más complejos y aprenden buenas prácticas de codificación.",
+            desc: "Profundización en programación estructurada con énfasis en modularidad, recursividad, manejo de archivos y estructuras de datos básicas.\n\nLos estudiantes desarrollan prog[...]",
             credits: 5,
             area: "Programación",
             color: "#15803D",
@@ -299,7 +338,7 @@
           },
           {
             name: "Electricidad II",
-            desc: "Estudio de electromagnetismo y aplicaciones en dispositivos electrónicos. Análisis de circuitos AC y semiconductores básicos.\n\nFundamento para entender el hardware computacional y sistemas embebidos.",
+            desc: "Estudio de electromagnetismo y aplicaciones en dispositivos electrónicos. Análisis de circuitos AC y semiconductores básicos.\n\nFundamento para entender el hardware computa[...]",
             credits: 3,
             area: "Ciencias Naturales",
             color: "#1E40AF",
@@ -307,7 +346,7 @@
           },
           {
             name: "Técnicas de Estudio II",
-            desc: "Avanzado en técnicas de investigación, redacción académica y presentación de información. Incluye métodos de estudio para materias técnicas.\n\nPrepara al estudiante para proyectos de investigación y trabajo académico superior.",
+            desc: "Avanzado en técnicas de investigación, redacción académica y presentación de información. Incluye métodos de estudio para materias técnicas.\n\nPrepara al estudiante pa[...]",
             credits: 2,
             area: "Complementarios",
             color: "#854D0E",
@@ -321,7 +360,7 @@
         courses: [
           {
             name: "Física II",
-            desc: "Estudio de electromagnetismo, ondas, óptica y termodinámica. Aplicaciones en sistemas electrónicos y de comunicación.\n\nProporciona el conocimiento físico necesario para áreas como redes, sistemas embebidos y procesamiento de señales.",
+            desc: "Estudio de electromagnetismo, ondas, óptica y termodinámica. Aplicaciones en sistemas electrónicos y de comunicación.\n\nProporciona el conocimiento físico necesario para [...]",
             credits: 5,
             area: "Ciencias Naturales",
             color: "#1E40AF",
@@ -329,7 +368,7 @@
           },
           {
             name: "Matemática III",
-            desc: "Álgebra lineal: vectores, matrices, sistemas de ecuaciones, espacios vectoriales y transformaciones lineales.\n\nEsencial para áreas como gráficos por computadora, machine learning, criptografía y análisis de datos.",
+            desc: "Álgebra lineal: vectores, matrices, sistemas de ecuaciones, espacios vectoriales y transformaciones lineales.\n\nEsencial para áreas como gráficos por computadora, machine l[...]",
             credits: 4,
             area: "Matemáticas",
             color: "#0A4735",
@@ -337,7 +376,7 @@
           },
           {
             name: "Álgebra Lineal",
-            desc: "Estudio profundo de estructuras algebraicas lineales y sus aplicaciones en computación.\n\nLos estudiantes resuelven problemas mediante métodos matriciales y comprensión de espacios vectoriales.",
+            desc: "Estudio profundo de estructuras algebraicas lineales y sus aplicaciones en computación.\n\nLos estudiantes resuelven problemas mediante métodos matriciales y comprensión de [...]",
             credits: 4,
             area: "Matemáticas",
             color: "#0A4735",
@@ -345,7 +384,7 @@
           },
           {
             name: "Electrónica I",
-            desc: "Introducción a dispositivos electrónicos: diodos, transistores y amplificadores operacionales. Análisis de circuitos analógicos.\n\nBase fundamental para entender la electrónica digital y sistemas embebidos.",
+            desc: "Introducción a dispositivos electrónicos: diodos, transistores y amplificadores operacionales. Análisis de circuitos analógicos.\n\nBase fundamental para entender la electr[...]",
             credits: 3,
             area: "Ciencias Naturales",
             color: "#1E40AF",
@@ -353,7 +392,7 @@
           },
           {
             name: "Electrónica Digital",
-            desc: "Diseño y análisis de circuitos digitales avanzados, multiplexores, decodificadores y memoria.\n\nLos estudiantes implementan sistemas digitales utilizando herramientas de simulación y diseño.",
+            desc: "Diseño y análisis de circuitos digitales avanzados, multiplexores, decodificadores y memoria.\n\nLos estudiantes implementan sistemas digitales utilizando herramientas de sim[...]",
             credits: 3,
             area: "Sistemas",
             color: "#7C3AED",
@@ -361,7 +400,7 @@
           },
           {
             name: "Dibujo CAD",
-            desc: "Introducción al diseño asistido por computadora, creación de diagramas, esquemas técnicos y planos.\n\nHerramienta esencial para la documentación de proyectos de ingeniería.",
+            desc: "Introducción al diseño asistido por computadora, creación de diagramas, esquemas técnicos y planos.\n\nHerramienta esencial para la documentación de proyectos de ingenier[...]",
             credits: 2,
             area: "Complementarios",
             color: "#854D0E",
@@ -375,7 +414,7 @@
         courses: [
           {
             name: "Física III",
-            desc: "Continuación de física con énfasis en ondas electromagnéticas y física moderna relevante para computación.\n\nAplicaciones en tecnologías de comunicación y procesamiento de señales.",
+            desc: "Continuación de física con énfasis en ondas electromagnéticas y física moderna relevante para computación.\n\nAplicaciones en tecnologías de comunicación y procesamient[...]",
             credits: 4,
             area: "Ciencias Naturales",
             color: "#1E40AF",
@@ -437,7 +476,7 @@
         courses: [
           {
             name: "Contabilidad",
-            desc: "Principios de contabilidad financiera y su aplicación en la gestión de proyectos tecnológicos.\n\nLos estudiantes aprenden a interpretar estados financieros y tomar decisiones económicas informadas.",
+            desc: "Principios de contabilidad financiera y su aplicación en la gestión de proyectos tecnológicos.\n\nLos estudiantes aprenden a interpretar estados financieros y tomar decision[...]",
             credits: 3,
             area: "Complementarios",
             color: "#854D0E",
@@ -531,7 +570,7 @@
           },
           {
             name: "Compiladores",
-            desc: "Diseño e implementación de compiladores: análisis léxico, sintáctico y semántico.\n\nLos estudiantes construyen herramientas de traducción de lenguajes de programación.",
+            desc: "Diseño e implementación de compiladores: análisis léxico, sintáctico y semántico.\n\nLos estudiantes construyen herramientas de traducción de lenguajes de programación.[...]",
             credits: 4,
             area: "Sistemas",
             color: "#7C3AED",
@@ -617,7 +656,7 @@
           },
           {
             name: "Administración de Empresas",
-            desc: "Principios de gestión, organización y estrategia empresarial aplicada a tecnologías de información.\n\nLos estudiantes aprenden a gestionar proyectos y equipos tecnológicos.",
+            desc: "Principios de gestión, organización y estrategia empresarial aplicada a tecnologías de información.\n\nLos estudiantes aprenden a gestionar proyectos y equipos tecnológico[...]",
             credits: 3,
             area: "Complementarios",
             color: "#854D0E",
@@ -732,14 +771,14 @@
         .map(c => `
           <div class="rounded-2xl border border-gray-200 bg-white">
             <button 
-              class="course-button w-full px-6 py-5 flex justify-between items-center"
+              class="course-button w-full px-6 py-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4"
               aria-expanded="false"
             >
-              <div>
-                <span class="font-semibold text-lg">${escapeHtml(c.name)}</span>
-                <span class="ml-4 text-sm text-gray-500">${c.credits} créditos</span>
+              <div class="text-left">
+                <span class="font-semibold text-lg block">${escapeHtml(c.name)}</span>
+                <span class="credits-badge text-sm text-gray-500">${c.credits} créditos</span>
               </div>
-              <div class="flex items-center gap-3">
+              <div class="flex items-center gap-3 flex-shrink-0">
                 <span class="area-badge" style="background-color: ${c.color};">${escapeHtml(c.area)}</span>
                 <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-gray-400"></i>
               </div>
