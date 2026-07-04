@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pensum de Técnico en Desarrollo de Software - UMES">
+  <meta name="keywords" content="técnico desarrollo software, UMES, pensum, currículo, programación">
+  <meta name="author" content="UMES - Universidad Mesoamericana">
+  
+  <title>Pensum | Técnico en Desarrollo de Software - UMES</title>
+  
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #0B4F8A;
+      --accent-color: #E9F1FA;
+      --error-color: #B91C1C;
+    }
+
+    * { 
+      font-family: 'Roboto Condensed', sans-serif; 
+    }
+
+    .course-desc {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    .course-desc.open {
+      max-height: 1200px;
+      opacity: 1;
+    }
+
+    .semester-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease;
+    }
+
+    .semester-content.open {
+      max-height: 4000px;
+    }
+
+    .chevron-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .chevron-icon.rotated {
+      transform: rotate(180deg);
+    }
+
+    .logo-img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .area-badge {
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      color: white;
+      font-weight: 500;
+    }
+
+    .semester-button:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    .course-button:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width: 768px) {
+      .credits-badge {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        background-color: #f3f4f6;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .credits-badge {
+        display: inline;
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="h-full bg-white">
+
+  <div class="max-w-5xl mx-auto p-6 md:p-12">
+
+    <!-- Encabezado Responsive -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+      <!-- Logos en móvil -->
+      <div class="flex gap-8 md:hidden mb-6">
+        <img 
+          src="https://i.ibb.co/k61r3ykV/Variaciones-de-Logotipo-Mesa-de-trabajo-1.png" 
+          alt="Logo UMES" 
+          class="logo-img w-28 h-28"
+          loading="lazy"
+        >
+        <img 
+          src="https://i.ibb.co/tMNtptmk/Logo-Facultad-Ingenier-a-01.png" 
+          alt="Logo Facultad de Ingeniería" 
+          class="logo-img w-28 h-28"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- Logo izquierdo en desktop -->
+      <div class="hidden md:flex flex-shrink-0">
+        <img 
+          src="https://i.ibb.co/k61r3ykV/Variaciones-de-Logotipo-Mesa-de-trabajo-1.png" 
+          alt="Logo UMES" 
+          class="logo-img w-40 h-40"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- Título -->
+      <div class="text-center flex-grow">
+        <h1 class="text-4xl md:text-5xl font-bold text-[var(--primary-color)] leading-tight">
+          Técnico en Desarrollo de Software
+        </h1>
+        <p class="text-[var(--primary-color)] mt-3 text-lg">Universidad Mesoamericana • Facultad de Ingeniería</p>
+      </div>
+
+      <!-- Logo derecho en desktop -->
+      <div class="hidden md:flex flex-shrink-0">
+        <img 
+          src="https://i.ibb.co/tMNtptmk/Logo-Facultad-Ingenier-a-01.png" 
+          alt="Logo Facultad de Ingeniería" 
+          class="logo-img w-36 h-36"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+    <!-- Perfil de Ingreso -->
+    <section class="max-w-4xl mx-auto mb-12 p-8 rounded-3xl bg-gradient-to-br from-blue-50 to-white border-l-4" style="border-color: #0B4F8A;" aria-label="Perfil de Ingreso">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #0B4F8A;">
+          <i data-lucide="user" class="w-6 h-6 text-white"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-[var(--primary-color)]">Perfil de Ingreso</h2>
+      </div>
+      <p class="text-gray-700 leading-relaxed ml-16">
+        Dirigido a estudiantes interesados en desarrollo de software con aptitudes para la programación, pensamiento lógico y disposición para el aprendizaje continuo. Se recomienda tener conocimientos básicos en computación y matemáticas elementales.
+      </p>
+    </section>
+
+    <!-- Áreas Temáticas -->
+    <section class="max-w-4xl mx-auto mb-16 p-8 rounded-3xl" style="background-color: var(--accent-color);" aria-label="Áreas Temáticas">
+      <h2 class="font-bold text-2xl text-[var(--primary-color)] text-center mb-8">Áreas Temáticas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl bg-white border-l-4 flex gap-4" style="border-color: #0B4F8A;">
+          <i data-lucide="code" class="w-8 h-8 flex-shrink-0" style="color: #0B4F8A;"></i>
+          <div>
+            <div class="font-semibold" style="color: #0B4F8A;">Programación</div>
+            <p class="text-sm text-gray-600">Lenguajes y desarrollo</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border-l-4 flex gap-4" style="border-color: #1E40AF;">
+          <i data-lucide="database" class="w-8 h-8 flex-shrink-0" style="color: #1E40AF;"></i>
+          <div>
+            <div class="font-semibold" style="color: #1E40AF;">Bases de Datos</div>
+            <p class="text-sm text-gray-600">Gestión de datos</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border-l-4 flex gap-4" style="border-color: #15803D;">
+          <i data-lucide="globe" class="w-8 h-8 flex-shrink-0" style="color: #15803D;"></i>
+          <div>
+            <div class="font-semibold" style="color: #15803D;">Web</div>
+            <p class="text-sm text-gray-600">Desarrollo web moderno</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border-l-4 flex gap-4" style="border-color: #7C3AED;">
+          <i data-lucide="smartphone" class="w-8 h-8 flex-shrink-0" style="color: #7C3AED;"></i>
+          <div>
+            <div class="font-semibold" style="color: #7C3AED;">Móvil</div>
+            <p class="text-sm text-gray-600">Aplicaciones móviles</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border-l-4 flex gap-4" style="border-color: #C2410C;">
+          <i data-lucide="layers" class="w-8 h-8 flex-shrink-0" style="color: #C2410C;"></i>
+          <div>
+            <div class="font-semibold" style="color: #C2410C;">Sistemas</div>
+            <p class="text-sm text-gray-600">Infraestructura y redes</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border-l-4 flex gap-4" style="border-color: #854D0E;">
+          <i data-lucide="book-open" class="w-8 h-8 flex-shrink-0" style="color: #854D0E;"></i>
+          <div>
+            <div class="font-semibold" style="color: #854D0E;">Complementarios</div>
+            <p class="text-sm text-gray-600">Formación profesional</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Información General -->
+    <section class="max-w-4xl mx-auto mb-12 p-8 rounded-3xl bg-gray-50 border-l-4" style="border-color: #0B4F8A;" aria-label="Información General del Programa">
+      <h2 class="font-bold text-2xl text-[var(--primary-color)] mb-6">Información General</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-3">
+          <i data-lucide="clock" class="w-6 h-6 flex-shrink-0" style="color: #0B4F8A;"></i>
+          <div>
+            <p class="font-semibold text-gray-800">Duración</p>
+            <p class="text-gray-600">3 años (6 semestres)</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="book" class="w-6 h-6 flex-shrink-0" style="color: #0B4F8A;"></i>
+          <div>
+            <p class="font-semibold text-gray-800">Total de Créditos</p>
+            <p class="text-gray-600">110 créditos</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="calendar" class="w-6 h-6 flex-shrink-0" style="color: #0B4F8A;"></i>
+          <div>
+            <p class="font-semibold text-gray-800">Horario</p>
+            <p class="text-gray-600">15:00 a 18:40 horas</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="graduation-cap" class="w-6 h-6 flex-shrink-0" style="color: #0B4F8A;"></i>
+          <div>
+            <p class="font-semibold text-gray-800">Modalidad</p>
+            <p class="text-gray-600">Presencial</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semestres -->
+    <section id="semesters" class="max-w-4xl mx-auto space-y-8" aria-label="Pensum por Semestres"></section>
+
+    <!-- Perfil de Egreso -->
+    <section class="max-w-4xl mx-auto mt-20 p-8 rounded-3xl bg-gradient-to-br from-green-50 to-white border-l-4" style="border-color: #15803D;" aria-label="Perfil de Egreso">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #15803D;">
+          <i data-lucide="check-circle" class="w-6 h-6 text-white"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-[var(--primary-color)]">Perfil de Egreso</h2>
+      </div>
+      <p class="text-gray-700 leading-relaxed ml-16">
+        Profesionales técnicos capaces de desarrollar, implementar y mantener soluciones de software, con sólida formación práctica, capacidad analítica y espíritu de innovación continua.
+      </p>
+    </section>
+
+    <!-- Requisitos de Graduación -->
+    <section class="max-w-4xl mx-auto mt-8 p-8 rounded-3xl bg-gradient-to-br from-yellow-50 to-white border-l-4" style="border-color: #854D0E;" aria-label="Requisitos de Graduación">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #854D0E;">
+          <i data-lucide="clipboard-check" class="w-6 h-6 text-white"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-[var(--primary-color)]">Requisitos de Graduación</h2>
+      </div>
+      <ul class="space-y-3 text-gray-700 ml-16">
+        <li class="flex gap-3">
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
+          <span>Aprobar todas las materias con mínimo 61 puntos.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
+          <span>Promedio general acumulado mínimo de 70 puntos.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
+          <span>Desarrollar y sustentar el Proyecto Profesional (mínimo 70 puntos).</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[#854D0E] font-bold flex-shrink-0">✓</span>
+          <span>Aprobar el Examen General Privado con mínimo 70 puntos.</span>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script>
+    // Datos del currículo
+    const curriculum = [
+      {
+        semester: "Primer Semestre",
+        totalCredits: 17,
+        courses: [
+          {
+            name: "Programación I",
+            desc: "Introducción a los conceptos fundamentales de programación: algoritmos, variables, estructuras de control y funciones. Los estudiantes aprenden a resolver problemas lógicos mediante la programación.",
+            credits: 6,
+            area: "Programación",
+            color: "#0B4F8A",
+            related: "Programación II"
+          },
+          {
+            name: "Bases de Datos I",
+            desc: "Introducción a bases de datos relacionales, diseño de tablas, SQL básico y normalización. Los estudiantes aprenden a modelar y gestionar datos.",
+            credits: 4,
+            area: "Bases de Datos",
+            color: "#1E40AF",
+            related: "Bases de Datos II, Bases de Datos III"
+          },
+          {
+            name: "Técnicas de Estudio I",
+            desc: "Desarrolla habilidades de aprendizaje autónomo, técnicas de lectura comprensiva, toma de apuntes y métodos de estudio efectivos.",
+            credits: 4,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Todas las materias"
+          },
+          {
+            name: "Inglés I",
+            desc: "Desarrollo de competencias comunicativas en inglés técnico y general. Esencial para la lectura de documentación técnica.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Inglés II, Inglés III, Inglés IV"
+          }
+        ]
+      },
+      {
+        semester: "Segundo Semestre",
+        totalCredits: 19,
+        courses: [
+          {
+            name: "Programación II",
+            desc: "Profundización en programación estructurada con énfasis en manejo de archivos, estructuras de datos y modularidad. Los estudiantes desarrollan programas más complejos.",
+            credits: 5,
+            area: "Programación",
+            color: "#0B4F8A",
+            related: "Programación I"
+          },
+          {
+            name: "Bases de Datos II",
+            desc: "Consultas avanzadas en SQL, procedimientos almacenados y transacciones. Los estudiantes implementan soluciones de bases de datos para aplicaciones reales.",
+            credits: 4,
+            area: "Bases de Datos",
+            color: "#1E40AF",
+            related: "Bases de Datos I, Bases de Datos III"
+          },
+          {
+            name: "Sistemas Operativos",
+            desc: "Conceptos fundamentales de sistemas operativos: procesos, memoria, archivos y concurrencia. Los estudiantes comprenden el funcionamiento de SO modernos.",
+            credits: 4,
+            area: "Sistemas",
+            color: "#7C3AED",
+            related: ""
+          },
+          {
+            name: "Ingeniería del Software I",
+            desc: "Metodologías de desarrollo, ciclo de vida del software y modelado básico. Introdución a las buenas prácticas en desarrollo de software.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Ingeniería del Software II"
+          },
+          {
+            name: "Inglés II",
+            desc: "Continuación del inglés técnico con énfasis en comprensión de documentación técnica y comunicación profesional.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Inglés I"
+          }
+        ]
+      },
+      {
+        semester: "Tercer Semestre",
+        totalCredits: 21,
+        courses: [
+          {
+            name: "Programación Web I",
+            desc: "Introducción al desarrollo web: HTML, CSS y JavaScript básico. Los estudiantes crean sitios web estáticos e interactivos.",
+            credits: 4,
+            area: "Web",
+            color: "#15803D",
+            related: "Programación Web II"
+          },
+          {
+            name: "Bases de Datos III",
+            desc: "Bases de datos avanzadas, optimización de consultas y tecnologías NoSQL. Gestión de datos en aplicaciones empresariales.",
+            credits: 4,
+            area: "Bases de Datos",
+            color: "#1E40AF",
+            related: "Bases de Datos II"
+          },
+          {
+            name: "Antropología Filosófica",
+            desc: "Estudio de la naturaleza humana, ética y reflexión crítica sobre el impacto social de la tecnología.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Ética Profesional"
+          },
+          {
+            name: "Estructuras Lógicas I",
+            desc: "Fundamentos de lógica digital, álgebra de Boole y circuitos combinacionales. Base para entender sistemas computacionales.",
+            credits: 4,
+            area: "Sistemas",
+            color: "#7C3AED",
+            related: "Estructuras Lógicas II"
+          },
+          {
+            name: "Ingeniería del Software II",
+            desc: "Patrones de diseño, testing y buenas prácticas en desarrollo de software. Enfoque en calidad del software.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Ingeniería del Software I"
+          },
+          {
+            name: "Inglés III",
+            desc: "Inglés técnico avanzado con énfasis en documentación técnica y comunicación profesional.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Inglés II"
+          }
+        ]
+      },
+      {
+        semester: "Cuarto Semestre",
+        totalCredits: 20,
+        courses: [
+          {
+            name: "Programación Web II",
+            desc: "Desarrollo backend: frameworks web, APIs y conexión con bases de datos. Los estudiantes crean aplicaciones web full-stack.",
+            credits: 4,
+            area: "Web",
+            color: "#15803D",
+            related: "Programación Web I"
+          },
+          {
+            name: "Redes",
+            desc: "Fundamentos de redes de computadoras, protocolo TCP/IP, topologías y configuración básica. Introducción a la infraestructura de redes.",
+            credits: 4,
+            area: "Sistemas",
+            color: "#7C3AED",
+            related: ""
+          },
+          {
+            name: "Filosofía Social",
+            desc: "Análisis del impacto social y ético de las tecnologías de la información. Reflexión crítica sobre responsabilidad profesional.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Ética Profesional"
+          },
+          {
+            name: "Estructuras Lógicas II",
+            desc: "Circuitos secuenciales, flip-flops y sistemas digitales avanzados. Profundización en electrónica digital.",
+            credits: 4,
+            area: "Sistemas",
+            color: "#7C3AED",
+            related: "Estructuras Lógicas I"
+          },
+          {
+            name: "Métodos de Investigación Tecnológica",
+            desc: "Metodología de investigación aplicada a proyectos de ingeniería. Preparación para el Proyecto Profesional.",
+            credits: 2,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: ""
+          },
+          {
+            name: "Inglés IV",
+            desc: "Comunicación profesional avanzada y lectura de literatura técnica especializada.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Inglés III"
+          }
+        ]
+      },
+      {
+        semester: "Quinto Semestre",
+        totalCredits: 16,
+        courses: [
+          {
+            name: "Programación de Dispositivos Móviles I",
+            desc: "Introducción al desarrollo de aplicaciones móviles: interfaces de usuario, sensores y APIs móviles.",
+            credits: 4,
+            area: "Móvil",
+            color: "#7C3AED",
+            related: "Programación de Dispositivos Móviles II"
+          },
+          {
+            name: "Seguridad Informática",
+            desc: "Principios de seguridad, criptografía, vulnerabilidades y protección de sistemas. Mejores prácticas en seguridad.",
+            credits: 3,
+            area: "Sistemas",
+            color: "#7C3AED",
+            related: ""
+          },
+          {
+            name: "Emprendimiento Tecnológico",
+            desc: "Fundamentos de emprendimiento, desarrollo de ideas de negocio tecnológicas y plan de negocios.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: ""
+          },
+          {
+            name: "Estadística",
+            desc: "Probabilidad, distribuciones estadísticas e inferencia. Análisis de datos para la toma de decisiones.",
+            credits: 3,
+            area: "Programación",
+            color: "#0B4F8A",
+            related: ""
+          },
+          {
+            name: "Legislación Informática",
+            desc: "Marco legal de las tecnologías de información, propiedad intelectual y ciberseguridad legal.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Ética Profesional"
+          }
+        ]
+      },
+      {
+        semester: "Sexto Semestre",
+        totalCredits: 17,
+        courses: [
+          {
+            name: "Programación de Dispositivos Móviles II",
+            desc: "Desarrollo avanzado de aplicaciones móviles: integración con servicios en la nube y publicación en tiendas.",
+            credits: 4,
+            area: "Móvil",
+            color: "#7C3AED",
+            related: "Programación de Dispositivos Móviles I"
+          },
+          {
+            name: "Arquitectura de Sistemas",
+            desc: "Arquitecturas de computadoras, diseño de sistemas escalables y optimización de rendimiento.",
+            credits: 4,
+            area: "Sistemas",
+            color: "#7C3AED",
+            related: ""
+          },
+          {
+            name: "Tecnologías Emergentes",
+            desc: "Tendencias actuales en tecnología: inteligencia artificial, blockchain, IoT y computación en la nube.",
+            credits: 4,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: ""
+          },
+          {
+            name: "Ética Profesional",
+            desc: "Ética en ingeniería, responsabilidad social y dilemas éticos en tecnología. Formación integral para ejercicio profesional responsable.",
+            credits: 3,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: "Filosofía Social"
+          },
+          {
+            name: "Dibujo CAD",
+            desc: "Introducción al diseño asistido por computadora, creación de diagramas y esquemas técnicos.",
+            credits: 2,
+            area: "Complementarios",
+            color: "#854D0E",
+            related: ""
+          }
+        ]
+      }
+    ];
+
+    // Renderizar semestres
+    const container = document.getElementById('semesters');
+
+    curriculum.forEach((sem, index) => {
+      const block = document.createElement('div');
+      block.className = 'semester-block border-2 border-[var(--accent-color)] rounded-3xl bg-white overflow-hidden';
+      
+      const courseHTML = sem.courses
+        .map(c => `
+          <div class="rounded-2xl border-2 border-gray-200 bg-white">
+            <button 
+              class="course-button w-full px-6 py-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4"
+              aria-expanded="false"
+            >
+              <div class="text-left">
+                <span class="font-semibold text-lg block">${escapeHtml(c.name)}</span>
+                <span class="credits-badge text-sm text-gray-500">${c.credits} créditos</span>
+              </div>
+              <div class="flex items-center gap-3 flex-shrink-0">
+                <span class="area-badge" style="background-color: ${c.color};">${escapeHtml(c.area)}</span>
+                <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-gray-400"></i>
+              </div>
+            </button>
+            <div class="course-desc px-6 pb-6">
+              <div class="text-gray-700 text-sm leading-relaxed">
+                ${c.desc.split('\n\n').map(p => `<p>${escapeHtml(p)}</p>`).join('')}
+                ${c.related ? `<p class="mt-4"><strong>Cursos relacionados:</strong> <span class="text-[var(--primary-color)]">${escapeHtml(c.related || '—')}</span></p>` : ''}
+              </div>
+            </div>
+          </div>
+        `)
+        .join('');
+
+      block.innerHTML = `
+        <button 
+          class="semester-button w-full px-8 py-6 flex justify-between items-center text-left border-b-2 border-gray-100"
+          aria-expanded="${index === 0 ? 'true' : 'false'}"
+        >
+          <div class="flex items-center gap-4">
+            <span class="text-2xl font-bold text-[var(--primary-color)]">${sem.semester}</span>
+            <span class="text-lg text-gray-500">(${sem.totalCredits} créditos)</span>
+          </div>
+          <i data-lucide="chevron-down" class="chevron-icon w-6 h-6 text-[var(--primary-color)]"></i>
+        </button>
+        <div class="semester-content ${index === 0 ? 'open' : ''}">
+          <div class="px-8 pb-8 space-y-4 pt-6">
+            ${courseHTML}
+          </div>
+        </div>
+      `;
+
+      container.appendChild(block);
+    });
+
+    // Event listeners
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.semester-button')) {
+        const btn = e.target.closest('.semester-button');
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.chevron-icon');
+        const isOpen = content.classList.contains('open');
+        
+        content.classList.toggle('open');
+        icon.classList.toggle('rotated');
+        btn.setAttribute('aria-expanded', !isOpen);
+      }
+
+      if (e.target.closest('.course-button')) {
+        const btn = e.target.closest('.course-button');
+        const desc = btn.nextElementSibling;
+        const icon = btn.querySelector('.chevron-icon');
+        const isOpen = desc.classList.contains('open');
+        
+        desc.classList.toggle('open');
+        icon.classList.toggle('rotated');
+        btn.setAttribute('aria-expanded', !isOpen);
+      }
+    });
+
+    // Utilidad para escapar HTML
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Inicializar iconos de Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>
